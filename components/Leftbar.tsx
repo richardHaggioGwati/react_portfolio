@@ -1,6 +1,10 @@
+import Box from '@mui/material/Box';
+
 const Leftbar = () => {
     return (
-        <p color="purple">Leftbar</p>
+        <Box display='flex' color='purple' flex={6}>
+			<p> Leftbar</p>
+		</Box>
     )
 }
 

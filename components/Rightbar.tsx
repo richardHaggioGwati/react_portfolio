@@ -1,7 +1,11 @@
+import Box from '@mui/material/Box';
+
 const Rightbar = () => {
-    return (
-        <p color="green"> Rightbar</p>
-    )
-}
+	return (
+		<Box display='flex' color='green' flex={6}>
+			<p> Rightbar</p>
+		</Box>
+	);
+};
 
 export default Rightbar;
