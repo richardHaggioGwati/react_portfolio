@@ -4,5 +4,6 @@ body {
 	font-family: 'Varela Round', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
-  padding: 0;
+	padding: 0;
+	background-color: black;
 }
