@@ -3,6 +3,7 @@ import { useState } from 'react';
 import classes from './Hamburger.module.css';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import theme from './theme';
 
 const Hamburger: React.FC = () => {
 	const [isActive, setIsActive] = useState(false);
@@ -22,7 +23,7 @@ const Hamburger: React.FC = () => {
 	return (
 		<>
 			<button
-                onClick={handleClick}
+				onClick={handleClick}
 				className={`${classes.hamburger} ${isActive ? classes.active : ''}`}
 			>
 				<div className={classes.bar}></div>
@@ -35,9 +36,14 @@ const Hamburger: React.FC = () => {
 				MenuListProps={{
 					'aria-labelledby': 'basic-button',
 				}}
+				sx={{
+					[theme.breakpoints.up('md')]: {
+						display: 'none',
+					},
+				}}
 			>
+				<MenuItem>Say hi!</MenuItem>
 				<MenuItem>Contact</MenuItem>
-				
 			</Menu>
 		</>
 	);
