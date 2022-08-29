@@ -20,7 +20,7 @@ const Nav: React.FC = () => {
 	return (
 		<>
 			<AppBar
-				position='sticky'
+				position='static'
 				sx={{
 					marginBottom: '0.5rem',
 					backgroundColor: '#fff',
