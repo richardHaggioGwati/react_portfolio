@@ -17,7 +17,7 @@ const Home: NextPage = () => {
 	console.log(height, width);
 	return (
 		<>
-			{width > 400 ? (
+			{width > 500 ? (
 				<Loading />
 			) : (
 				<>
