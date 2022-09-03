@@ -1,19 +1,35 @@
 import type { NextPage } from 'next';
-import { useState } from 'react';
+import dynamic from 'next/dynamic';
 
 import Loading from '../components/Design/Loading';
 import Nav from '../components/Nav';
+import Header from '../components/Header';
+import Personal from '../components/Personal';
+import TechStack from '../components/TechStack';
+import Footer from '../components/Footer';
+
+//const Window  = dynamic(()=>import("../lib/Window"), {ssr: false} )
+import useWindowResize from '../hooks/useWindowResize';
 
 const Home: NextPage = () => {
-	const [loading, setLoading] = useState(true);
+	const { height, width } = useWindowResize();
 
-	setTimeout(() => {
-		setLoading(false);
-	}, 3000);
-
-	return (<>{loading ? <Loading /> : <>
-		<Nav />
-	</>}</>);
+	console.log(height, width);
+	return (
+		<>
+			{width > 400 ? (
+				<Loading />
+			) : (
+				<>
+					<Nav />
+					<Header />
+					<Personal />
+					<TechStack />
+					<Footer />
+				</>
+			)}
+		</>
+	);
 };
 
 export default Home;

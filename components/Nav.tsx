@@ -23,7 +23,7 @@ const Nav: React.FC = () => {
 				position='static'
 				sx={{
 					marginBottom: '0.5rem',
-					backgroundColor: '#fff',
+					backgroundColor: 'rgba(0,0,0,0.56)',
 					boxShadow: 'none',
 				}}
 			>
@@ -33,7 +33,7 @@ const Nav: React.FC = () => {
 							variant='h5'
 							component='h2'
 							sx={{
-								color: '#000',
+								color: '#fff',
 								fontWeight: 'bold',
 								marginLeft: '3rem',
 							}}

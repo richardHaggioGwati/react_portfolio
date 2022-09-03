@@ -1,8 +1,11 @@
 html,
 body {
-	height: 100%;
 	font-family: 'Varela Round', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
 	padding: 0;
+	background-image: url("../public/stars.svg");
+	background-size: cover;
+	z-index: -1;
+	background-color: rgb(0, 0, 0);
 }
