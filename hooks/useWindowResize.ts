@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
+interface Props {
+  width: number
+  height: number
+}
+
 function useWindowResize() {
-    interface Props {
-        width: number
-        height: number
-  }
-  
     const [windowSize, setWindowSize] = useState<Props>({
     width: 0,
     height: 0,

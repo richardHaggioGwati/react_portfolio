@@ -12,6 +12,7 @@ const Hamburger: React.FC = () => {
 	return (
 		<>
 			<button
+				name="icon-drawer"
 				onClick={handleClick}
 				className={`${classes.hamburger} ${isActive ? classes.active : ''}`}
 			>
