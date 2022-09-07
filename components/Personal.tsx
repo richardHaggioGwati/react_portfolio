@@ -41,7 +41,7 @@ const Personal: React.FC = () => {
 
 					<Content>
 						I&apos;ve been working as a freelance developer for a year now, I
-						have a peaceful sense of assurance, am innately interested, and am
+						have a peaceful sense of assurance, am innately interested and am
 						constantly trying to get better at development and design by solving
 						one challenge at a time.
 					</Content>
@@ -55,6 +55,7 @@ const Personal: React.FC = () => {
 					layout='responsive'
 					width={419}
 					height={432}
+					loading='lazy'
 				/>
 			</ImageContainer>
 		</>

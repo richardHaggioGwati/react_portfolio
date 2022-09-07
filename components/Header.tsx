@@ -40,7 +40,7 @@ const Header: React.FC = () => {
 				</HeaderText>
 
 				<IntroParagraph>
-					I enjoy what I do and create elegantly simple things with code.
+					I enjoy what I do and create elegantly and simple things with code.
 				</IntroParagraph>
 			</Box>
 

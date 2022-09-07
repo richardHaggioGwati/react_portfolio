@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import { useState } from 'react';
 
 import Loading from '../components/Design/Loading';
 import Nav from '../components/Nav';
@@ -12,12 +11,6 @@ import Footer from '../components/Footer';
 import useWindowResize from '../hooks/useWindowResize';
 
 const Home: NextPage = () => {
-	const [loading, setLoading] = useState(true);
-
-	setTimeout(() => {
-		setLoading(false);
-	}, 1000);
-
 	const { height, width } = useWindowResize();
 
 	console.log(height, width);
@@ -27,17 +20,11 @@ const Home: NextPage = () => {
 				<Loading />
 			) : (
 				<>
-					{loading ? (
-						<Loading />
-					) : (
-						<>
-							<Nav />
-							<Header />
-							<Personal />
-							<TechStack />
-							<Footer />
-						</>
-					)}
+					<Nav />
+					<Header />
+					<Personal />
+					<TechStack />
+					<Footer />
 				</>
 			)}
 		</>

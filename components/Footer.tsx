@@ -5,9 +5,6 @@ import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material';
 
 import rocket from '../public/Rocket.svg';
-import linkdin from '../public/linkedin.svg';
-import gmail from '../public/gmail.svg';
-import slack from '../public/slack.svg';
 
 const Footer = () => {
 	const FooterContainer = styled(Box)({
@@ -54,6 +51,7 @@ const Footer = () => {
 					layout='responsive'
 					width={248}
 					height={156.67}
+					loading='lazy'
 				/>
 			</ImageContainer>
 			<FooterBox>
