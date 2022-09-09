@@ -49,7 +49,7 @@ const Header: React.FC = () => {
 					sx={{
 						width: '350px',
 						marginTop: '3rem',
-						marginLeft: '-5rem',
+						marginLeft: '-1.5rem',
 					}}
 				>
 					<Image
