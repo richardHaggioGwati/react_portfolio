@@ -39,6 +39,7 @@ const TechStack = () => {
 	const Text = styled(Typography)({
 		color: '#fff',
 		margin: '0rem 1.3rem',
+		textAlign: 'center',
 	});
 
 	const SunContainer = styled(Box)({
@@ -54,6 +55,7 @@ const TechStack = () => {
 				margin='-10px 0rem 0rem 3rem'
 				width='16rem'
 				height='31rem'
+				color='radial-gradient(circle farthest-side, #890048, #540048, #000027)'
 			>
 				<Header>What I Do</Header>
 				<Container>

@@ -35,7 +35,12 @@ const Personal: React.FC = () => {
 
 	return (
 		<>
-			<Card width='17rem' height='27rem' margin=' 3rem 0rem 0rem 1rem'>
+			<Card
+				width='17rem'
+				height='27rem'
+				margin=' 3rem 0rem 0rem 1rem'
+				color='radial-gradient(circle farthest-side, #890048, #540048, #000027)'
+			>
 				<Container flex={12}>
 					<Header>Hi I&apos;m Richard, Nice to meet you.</Header>
 

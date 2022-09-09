@@ -7,9 +7,10 @@ interface CardProps {
 	width?: string
 	height?: string
 	margin?: string
+	color?: string
 }
 
-const Card: React.FC<CardProps> = ({ children, width, height, margin }) => {
+const Card: React.FC<CardProps> = ({ children, width, height, margin, color }) => {
 	
 	const StyledCard = styled(Box)({
 		width: ` ${width ? width : '14rem'}`,
@@ -18,6 +19,11 @@ const Card: React.FC<CardProps> = ({ children, width, height, margin }) => {
 		borderWidth: '20px',
 		borderColor: '#ffffff',
 		margin: `${margin ? margin : '3rem'}`,
+		backgroundImage: `${color}`,
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'center',
+		alignItems: 'center',
 	});
 
 	return (

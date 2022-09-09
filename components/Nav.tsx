@@ -44,7 +44,7 @@ const Nav: React.FC = () => {
 							variant='h5'
 							component='h2'
 							sx={{
-								color: '#ff491d',
+								color: '#890048',
 								fontWeight: '900',
 							}}
 						>

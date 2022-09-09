@@ -1,32 +1,32 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 interface Props {
-  width: number
-  height: number
+	width: number;
+	height: number;
 }
 
 function useWindowResize() {
-    const [windowSize, setWindowSize] = useState<Props>({
-    width: 0,
-    height: 0,
-  });
+	const [windowSize, setWindowSize] = useState<Props>({
+		width: 0,
+		height: 0,
+	});
 
-  useEffect(() => {
-    function handleResize() {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
+	useEffect(() => {
+		function handleResize() {
+			setWindowSize({
+				width: window.innerWidth,
+				height: window.innerHeight,
+			});
+		}
 
-    window.addEventListener("resize", handleResize);
+		window.addEventListener('resize', handleResize);
 
-    handleResize();
+		handleResize();
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
 
-  return windowSize;
+	return windowSize;
 }
 
 export default useWindowResize;

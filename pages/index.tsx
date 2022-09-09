@@ -5,9 +5,8 @@ import Nav from '../components/Nav';
 import Header from '../components/Header';
 import Personal from '../components/Personal';
 import TechStack from '../components/TechStack';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'
 
-//const Window  = dynamic(()=>import("../lib/Window"), {ssr: false} )
 import useWindowResize from '../hooks/useWindowResize';
 
 const Home: NextPage = () => {
@@ -17,13 +16,24 @@ const Home: NextPage = () => {
 	return (
 		<>
 			{width > 500 ? (
-				<Loading />
+				<>
+					<Loading />
+					<p style={{
+						color: 'white',
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'center',
+						fontSize: '35px',
+						textAlign: 'center',
+					}}> Please resize window</p>
+				</>
 			) : (
 				<>
 					<Nav />
 					<Header />
 					<Personal />
 					<TechStack />
+
 					<Footer />
 				</>
 			)}
