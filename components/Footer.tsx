@@ -16,7 +16,7 @@ const Footer = () => {
 	const ImageContainer = styled(Box)({
 		width: '100%',
 		height: '14rem',
-		marginBottom: '-1rem',
+		marginBottom: '-2rem',
 		zIndex: '-1',
 	});
 
@@ -56,10 +56,7 @@ const Footer = () => {
 			</ImageContainer>
 			<FooterBox>
 				<FooterText>Prepair for blast of..</FooterText>
-				<IconsContainer>
-
-
-				</IconsContainer>
+				<IconsContainer></IconsContainer>
 			</FooterBox>
 		</FooterContainer>
 	);

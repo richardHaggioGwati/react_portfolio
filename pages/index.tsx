@@ -5,6 +5,7 @@ import Nav from '../components/Nav';
 import Header from '../components/Header';
 import Personal from '../components/Personal';
 import TechStack from '../components/TechStack';
+import Work from '../components/Work';
 import Footer from '../components/Footer'
 
 import useWindowResize from '../hooks/useWindowResize';
@@ -33,7 +34,7 @@ const Home: NextPage = () => {
 					<Header />
 					<Personal />
 					<TechStack />
-
+					<Work />
 					<Footer />
 				</>
 			)}
