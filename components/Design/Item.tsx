@@ -20,7 +20,7 @@ const Item: React.FC<ItemProps> = ({ image, color, disabled, atlText, target }) 
 		borderRadius: '12%',
 		backgroundColor: '#000027',
 		margin: '30px',
-		boxShadow: '5px 10px #D9D9D9',
+		boxShadow: '7px 10px rgba(0, 0, 0, 0.3)',
 		borderWidth: '15px',
 		alignItems: 'center',
 	});

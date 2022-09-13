@@ -45,17 +45,17 @@ const Work = () => {
 		color: '#ffffff',
 		marginTop: '30px',
 		textAlign: 'center',
-		fontSize: '1.4rem',
+		fontSize: '1.58rem',
 		fontWeight: '500',
 		margin: '1.6rem 1.5rem 0rem 1.5rem',
 	});
 
 	return (
 		<Card
-			width='17rem'
+			width='18rem'
 			height='68rem'
-			margin='0px 10px 50px 30px'
-			color='radial-gradient(circle farthest-side, #890048, #540048, #000027)'
+			margin='35px 10px 50px 30px'
+			color='radial-gradient(circle farthest-side, #890048, #540048)'
 		>
 			<Header>Project&apos;s I have done</Header>
 			<>

@@ -54,7 +54,7 @@ const TechStack = () => {
 			<Card
 				margin='-10px 0rem 0rem 3rem'
 				width='16rem'
-				height='31rem'
+				height='33rem'
 				color='radial-gradient(circle farthest-side, #890048, #540048, #000027)'
 			>
 				<Header>What I Do</Header>

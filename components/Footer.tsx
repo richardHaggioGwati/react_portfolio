@@ -1,10 +1,16 @@
+import Link from 'next/link';
+
 import Box from '@mui/material/Box';
 import Image from 'next/image';
 import Typography from '@mui/material/Typography';
-import Stack from '@mui/material/Stack';
+
 import { styled } from '@mui/material';
 
 import rocket from '../public/Rocket.svg';
+
+import gmail from '../public/gmail.svg';
+import linkedin from '../public/linkedin.svg';
+import github from '../public/mark-github.svg';
 
 const Footer = () => {
 	const FooterContainer = styled(Box)({
@@ -34,6 +40,13 @@ const Footer = () => {
 		margin: '1.6rem 0rem 0rem 0rem',
 	});
 
+	const IconBox = styled(Box)({
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		margin: '20px 0px 0px 0px'
+	});
+
 	const IconsContainer = styled(Box)({
 		width: '45px',
 		height: '45px',
@@ -54,9 +67,55 @@ const Footer = () => {
 					loading='lazy'
 				/>
 			</ImageContainer>
-			<FooterBox>
+			<FooterBox id='contact'>
 				<FooterText>Prepair for blast of..</FooterText>
-				<IconsContainer></IconsContainer>
+				<IconBox>
+					<IconsContainer>
+						<Link href='mailto:haggiog0844@gmail.com'>
+							<Image
+								src={gmail}
+								alt='mail'
+								layout='fixed'
+								width={35}
+								height={35}
+							/>
+						</Link>
+					</IconsContainer>
+					<IconsContainer>
+						<Link href='/'>
+							<a
+								href='https://www.linkedin.com/in/richard-gwati-636a80233/'
+								rel='noreferrer'
+								target='_blank'
+							>
+								<Image
+									src={linkedin}
+									alt='Linkedin'
+									layout='fixed'
+									width={35}
+									height={35}
+								/>
+							</a>
+						</Link>
+					</IconsContainer>
+					<IconsContainer>
+						<Link href='mailto:haggiog0844@gmail.com'>
+							<a
+								href='https://github.com/richardHaggioGwati'
+								rel='noreferrer'
+								target='_blank'
+							>
+								<Image
+									src={github}
+									alt='github'
+									layout='fixed'
+									width={28}
+									height={28}
+								/>
+							</a>
+						</Link>
+					</IconsContainer>
+				</IconBox>
 			</FooterBox>
 		</FooterContainer>
 	);
