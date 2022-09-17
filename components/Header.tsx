@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material';
 import Image from 'next/image';
 
-import planets from '../public/planets.svg';
+import planets from '../public/System.gif';
 import Card from './Design/Card';
 
 const Header: React.FC = () => {

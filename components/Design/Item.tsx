@@ -10,10 +10,16 @@ interface ItemProps {
 	color: string;
 	disabled: boolean;
 	atlText: string;
-	target: string
+	target: string;
 }
 
-const Item: React.FC<ItemProps> = ({ image, color, disabled, atlText, target }) => {
+const Item: React.FC<ItemProps> = ({
+	image,
+	color,
+	disabled,
+	atlText,
+	target,
+}) => {
 	const StyledBox = styled(Box)({
 		width: '202px',
 		height: '188px',
