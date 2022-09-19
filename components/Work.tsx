@@ -16,6 +16,7 @@ const Data = [
 		disabled: true,
 		altText: 'spotify',
 		link: '',
+		animation: 'fade-up'
 	},
 	{
 		image: chat,
@@ -23,6 +24,7 @@ const Data = [
 		disabled: false,
 		altText: 'chat app',
 		link: 'https://chat-app-dashboard.vercel.app/',
+		animation: 'fade-left'
 	},
 	{
 		image: earth,
@@ -30,6 +32,7 @@ const Data = [
 		disabled: true,
 		altText: 'planets app',
 		link: '',
+		animation: 'fade-right'
 	},
 	{
 		image: weather,
@@ -37,6 +40,7 @@ const Data = [
 		disabled: true,
 		altText: 'weather app',
 		link: '',
+		animation: 'fade-down'
 	},
 ];
 
@@ -67,6 +71,7 @@ const Work = () => {
 						target={item.link}
 						disabled={item.disabled}
 						atlText={item.altText}
+						animation={item.animation}
 					/>
 				))}
 			</>

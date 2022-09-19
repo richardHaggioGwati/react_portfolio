@@ -11,6 +11,7 @@ interface ItemProps {
 	disabled: boolean;
 	atlText: string;
 	target: string;
+	animation: string
 }
 
 const Item: React.FC<ItemProps> = ({
@@ -19,6 +20,7 @@ const Item: React.FC<ItemProps> = ({
 	disabled,
 	atlText,
 	target,
+	animation,
 }) => {
 	const StyledBox = styled(Box)({
 		width: '202px',
@@ -33,7 +35,7 @@ const Item: React.FC<ItemProps> = ({
 
 	return (
 		<>
-			<StyledBox>
+			<StyledBox data-aos={animation}>
 				<Box
 					sx={{
 						width: '172px',

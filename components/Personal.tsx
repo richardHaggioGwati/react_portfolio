@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 
 import Card from './Design/Card';
-import Ship from '../public/Saly-43.svg';
+import spaceman from '../public/SpaceMan.gif'
 
 const Personal: React.FC = () => {
 	const Container = styled(Box)({
@@ -30,7 +30,9 @@ const Personal: React.FC = () => {
 	});
 
 	const ImageContainer = styled(Box)({
-		width: '350px',
+		width: '300px',
+		margin: '15px -30px 25px 0px',
+		zIndex: '1',
 	});
 
 	return (
@@ -55,7 +57,7 @@ const Personal: React.FC = () => {
 
 			<ImageContainer>
 				<Image
-					src={Ship}
+					src={spaceman}
 					alt='Avater'
 					layout='responsive'
 					width={419}

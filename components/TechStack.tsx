@@ -56,6 +56,7 @@ const TechStack = () => {
 				width='16rem'
 				height='33rem'
 				color='radial-gradient(circle farthest-side, #890048, #540048, #000027)'
+				data-aos="flip-up"
 			>
 				<Header>What I Do</Header>
 				<Container>

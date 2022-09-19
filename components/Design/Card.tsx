@@ -24,6 +24,7 @@ const Card: React.FC<CardProps> = ({ children, width, height, margin, color }) =
 		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
+		zIndex: '-1',
 	});
 
 	return (

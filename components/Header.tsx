@@ -4,7 +4,6 @@ import { styled } from '@mui/material';
 import Image from 'next/image';
 
 import planets from '../public/System.gif';
-import Card from './Design/Card';
 
 const Header: React.FC = () => {
 	const Container = styled(Box)({
@@ -44,12 +43,11 @@ const Header: React.FC = () => {
 				</IntroParagraph>
 			</Box>
 
-			<Card>
+			<>
 				<Box
 					sx={{
-						width: '350px',
-						marginTop: '3rem',
-						marginLeft: '-1.5rem',
+						width: '500px',
+						marginTop: '-18px',
 					}}
 				>
 					<Image
@@ -57,11 +55,11 @@ const Header: React.FC = () => {
 						src={planets}
 						alt='Avater'
 						layout='responsive'
-						width={419}
-						height={432}
+						width={8467}
+						height={8520}
 					/>
 				</Box>
-			</Card>
+			</>
 		</Container>
 	);
 };
