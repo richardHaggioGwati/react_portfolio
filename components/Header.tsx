@@ -32,7 +32,7 @@ const Header: React.FC = () => {
 	});
 
 	return (
-		<Container flex={12} m={2}>
+		<Container flex={12}>
 			<Box>
 				<HeaderText variant='h1'>
 					Frontend Developer <br></br>& Designer
@@ -46,14 +46,13 @@ const Header: React.FC = () => {
 			<>
 				<Box
 					sx={{
-						width: '500px',
-						marginTop: '-18px',
+						width: '375px',
 					}}
 				>
 					<Image
 						priority
 						src={planets}
-						alt='Avater'
+						alt='Planets'
 						layout='responsive'
 						width={8467}
 						height={8520}
