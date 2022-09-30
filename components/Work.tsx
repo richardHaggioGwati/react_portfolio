@@ -1,81 +1,80 @@
 import { styled } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
-import Card from './Design/Card';
 import Item from './Design/Item';
-
-import spotify from '../public/work/Spotify.png';
-import chat from '../public/work/Chat.png';
-import earth from '../public/work/Earth.png';
-import weather from '../public/work/Weather.png';
+import theme from './Design/theme';
 
 const Data = [
 	{
-		image: spotify,
-		color: '#00A547',
+		swap: false,
+		title: 'Spotify',
+		text: 'This is a copy of the home page for the well-known Spotify online app, which is my favorite music streaming service.',
 		disabled: true,
 		altText: 'spotify',
 		link: '',
-		animation: 'fade-up'
+		animation: 'fade-up',
 	},
 	{
-		image: chat,
-		color: '#0077B6',
+		swap: true,
+		title: 'Chat',
+		text: 'A conversation app with a stylish appearance and modern design. Made with Material UI.',
 		disabled: false,
 		altText: 'chat app',
 		link: 'https://chat-app-dashboard.vercel.app/',
-		animation: 'fade-left'
+		animation: 'fade-left',
 	},
 	{
-		image: earth,
-		color: '#00A547',
+		swap: false,
+		title: 'Earth',
+		text: 'I adore the stars and everything space-related. This website provides details about each planet in our solar system.',
 		disabled: true,
-		altText: 'planets app',
+		altText: 'palnet website',
 		link: '',
-		animation: 'fade-right'
+		animation: 'fade-right',
 	},
 	{
-		image: weather,
-		color: '#00A547',
+		swap: true,
+		title: 'Weather',
+		text: 'Everybody requires their own weather app. A web application that generates local weather reports every day and is easy to maintain.',
 		disabled: true,
 		altText: 'weather app',
 		link: '',
-		animation: 'fade-down'
+		animation: 'fade-down',
 	},
 ];
 
 const Work = () => {
 	const Header = styled(Typography)({
-		color: '#ffffff',
+		color: '#000027',
 		marginTop: '30px',
 		textAlign: 'center',
-		fontSize: '1.58rem',
-		fontWeight: '500',
+		fontSize: 'clamp(2rem, 1.5rem + 3vw, 5rem)',
+		fontWeight: '800',
 		margin: '1.6rem 1.5rem 0rem 1.5rem',
+		width: '100%',
+		[theme.breakpoints.down('md')]: {
+			margin: '10px 0px 0px 0px',
+		},
 	});
 
 	return (
-		<Card
-			width='18rem'
-			height='68rem'
-			margin='35px 10px 50px 30px'
-			color='radial-gradient(circle farthest-side, #890048, #540048)'
-		>
-			<Header>Project&apos;s I have done</Header>
+		<>
+			<Header>My passion Projects</Header>
 			<>
 				{Data.map((item) => (
 					<Item
-						key={item.altText}
-						image={item.image}
-						color={item.color}
-						target={item.link}
+						key={item.title}
+						swap={item.swap}
+						title={item.title}
+						text={item.text}
 						disabled={item.disabled}
 						atlText={item.altText}
+						target={item.link}
 						animation={item.animation}
 					/>
 				))}
 			</>
-		</Card>
+		</>
 	);
 };
 

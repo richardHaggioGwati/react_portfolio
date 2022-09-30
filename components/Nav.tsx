@@ -1,15 +1,15 @@
+import Image from 'next/image';
+
 import Hamburger from './Design/Hamburger';
-import StyledButtons from './Design/StyledButtons';
+import StlyedButton from './Design/StlyedButton';
 
 import { styled } from '@mui/material';
 import Toolbar from '@mui/material/Toolbar';
 import AppBar from '@mui/material/AppBar';
-import Typography from '@mui/material/Typography';
-import Stack from '@mui/material/Stack';
-import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 import theme from './Design/theme';
 
+import name from '../public/Name.svg'
 
 const Nav: React.FC = () => {
 	const StyledToolbar = styled(Toolbar)({
@@ -17,40 +17,32 @@ const Nav: React.FC = () => {
 		display: 'flex',
 	});
 
+	const NameContainer = styled(Box)({
+		width: '100px',
+		padding: '0px 20px 0px 20px'
+	})
+
 	return (
 		<>
 			<AppBar
 				position='static'
 				sx={{
-					marginBottom: '0.5rem',
-					backgroundColor: 'rgba(0,0,0,0.56)',
+					backgroundColor: '#FFFFFF',
 					boxShadow: 'none',
+					margin: '0px 0px 0px 0px',
 				}}
 			>
 				<StyledToolbar>
-					<Stack direction='row' spacing={0.2}>
-						<Typography
-							variant='h5'
-							component='h2'
-							sx={{
-								color: '#fff',
-								fontWeight: 'bold',
-								marginLeft: '3rem',
-							}}
-						>
-							Richard
-						</Typography>
-						<Typography
-							variant='h5'
-							component='h2'
-							sx={{
-								color: '#890048',
-								fontWeight: '900',
-							}}
-						>
-							.
-						</Typography>
-					</Stack>
+					<NameContainer>
+					<Image
+						priority
+						src={name}
+						alt='Logo'
+						layout='responsive'
+						width={200}
+						height={200}
+					/>
+					</NameContainer>
 					<Box
 						sx={{
 							display: 'none',
@@ -59,11 +51,17 @@ const Nav: React.FC = () => {
 							},
 						}}
 					>
-						<Hamburger/>
+						<Hamburger />
 					</Box>
-					<StyledButtons />
+					<StlyedButton
+						text='Contact'
+						target='#contact'
+						margin='0.5rem'
+						padding='6px 30px 6px 30px'
+						disabled={false}
+						display={true}
+					/>
 				</StyledToolbar>
-				<Divider variant='inset' />
 			</AppBar>
 		</>
 	);

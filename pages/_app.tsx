@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import "../styles/Loading.css";
+
 import Head from "next/head";
 import type { AppProps } from "next/app";
 import { useEffect } from 'react';
@@ -13,8 +13,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 			once: true,
 			offset: 50,
 			duration: 2500,
-    });
-    console.log('initial')
+		});
+		
 	}, []);
 
 	return (

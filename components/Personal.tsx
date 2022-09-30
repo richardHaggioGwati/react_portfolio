@@ -3,11 +3,24 @@ import { styled } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 
-import Card from './Design/Card';
-import spaceman from '../public/SpaceMan.gif'
+import theme from './Design/theme';
+
+import holder from '../public/Holder.svg';
 
 const Personal: React.FC = () => {
+
 	const Container = styled(Box)({
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		flexDirection: 'column',
+		marginTop: '2rem',
+		[theme.breakpoints.up('md')]: {
+			flexDirection: 'row',
+		},
+	});
+
+	const TextContainer = styled(Box)({
 		display: 'flex',
 		color: '#fff',
 		marginTop: '-17px',
@@ -15,36 +28,54 @@ const Personal: React.FC = () => {
 	});
 
 	const Header = styled(Typography)({
-		marginTop: '60px',
+		color: '#000027',
 		textAlign: 'center',
-		fontSize: '1.6rem',
+		fontSize: ' clamp(2rem, 1rem + 1.5vw, 6rem)',
+		padding: '30px 30px 0px 30px',
 		fontWeight: '500',
-		margin: '4rem 1.5rem 0rem 1.5rem',
+		margin: '1rem 1.5rem 0rem 1.5rem',
+		[theme.breakpoints.down('md')]: {
+			padding: '0px',
+		},
 	});
 
 	const Content = styled(Typography)({
+		color: '#000027',
 		textAlign: 'center',
-		fontSize: '1.2rem',
+		fontSize: 'clamp(0.5rem, 0.5rem + 4vw, 2rem)',
 		fontWeight: '400',
 		margin: '25px 15px',
+		padding: '0 50px 0px 50px',
+		[theme.breakpoints.down('md')]: {
+			padding: '0px',
+		},
 	});
 
 	const ImageContainer = styled(Box)({
-		width: '300px',
+		minWidth: '60vh',
+		padding: '20px',
 		margin: '15px -30px 25px 0px',
 		zIndex: '1',
+		[theme.breakpoints.down('md')]: {
+			display: 'none',
+		},
 	});
 
 	return (
-		<>
-			<Card
-				width='17rem'
-				height='27rem'
-				margin=' 3rem 0rem 0rem 1rem'
-				color='radial-gradient(circle farthest-side, #890048, #540048, #000027)'
-			>
-				<Container flex={12}>
-					<Header>Hi I&apos;m Richard, Nice to meet you.</Header>
+		<Container>
+				<ImageContainer>
+					<Image
+						src={holder}
+						alt='Avater'
+						layout='responsive'
+						width={419}
+						height={432}
+						loading='lazy'
+					/>
+				</ImageContainer>
+				
+				<TextContainer flex={12}>
+					<Header>Hi I&apos;m Richard, <br/>Nice to meet you.</Header>
 
 					<Content>
 						I&apos;ve been working as a freelance developer for a year now, I
@@ -52,20 +83,9 @@ const Personal: React.FC = () => {
 						constantly trying to get better at development and design by solving
 						one challenge at a time.
 					</Content>
-				</Container>
-			</Card>
+				</TextContainer>
 
-			<ImageContainer>
-				<Image
-					src={spaceman}
-					alt='Avater'
-					layout='responsive'
-					width={419}
-					height={432}
-					loading='lazy'
-				/>
-			</ImageContainer>
-		</>
+		</Container>
 	);
 };
 
