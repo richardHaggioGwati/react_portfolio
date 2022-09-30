@@ -6,117 +6,109 @@ import Typography from '@mui/material/Typography';
 
 import { styled } from '@mui/material';
 
-import rocket from '../public/Rocket.svg';
+import theme from './Design/theme';
 
-import gmail from '../public/gmail.svg';
-import linkedin from '../public/linkedin.svg';
-import github from '../public/mark-github.svg';
+import linkdin from '../public/linkdin.svg';
+import google from '../public/google.svg';
+import github from '../public/github.svg';
 
 const Footer = () => {
 	const FooterContainer = styled(Box)({
-		marginTop: '1rem',
+		margin: '150px 0px 0px 0px',
 		display: 'flex',
-		flexDirection: 'column',
-	});
-
-	const ImageContainer = styled(Box)({
-		width: '100%',
-		height: '14rem',
-		marginBottom: '-2rem',
-		zIndex: '-1',
-	});
-
-	const FooterBox = styled(Box)({
-		backgroundColor: '#ffffff',
-		width: '100%',
-		height: '9rem',
-		textAlign: 'center',
-	});
-
-	const FooterText = styled(Typography)({
-		color: '#000',
-		fontWeight: '500',
-		fontSize: '1.5rem',
-		margin: '1.6rem 0rem 0rem 0rem',
-	});
-
-	const IconBox = styled(Box)({
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-		margin: '20px 0px 0px 0px'
-	});
-
-	const IconsContainer = styled(Box)({
-		width: '45px',
-		height: '45px',
 		flexDirection: 'row',
-		alignItems: 'center',
+		backgroundColor: '#f6f6f6',
+		minWidth: '100%',
+		height: '100px',
+	});
+
+	const Header = styled(Typography)({
+		color: '#000027',
+		fontWeight: '500',
+		width: '100%',
+		fontSize: '1.3rem',
+		margin: '30px 0px 0px 0px',
+		padding: '10px 0px 10px 10px',
+		[theme.breakpoints.down('md')]: {
+			display: 'none',
+		},
+	});
+
+	const StyledBox = styled(Box)({
+		display: 'flex',
+		flexDirection: 'row',
+		width: '30%',
+		padding: '35px 0px 0px 18px',
+		margin: '',
+	});
+
+	const Text = styled(Typography)({
+		color: '#000027',
+		fontSize: 'clamp(0.1rem)',
+		margin: '0px 0rem 0rem 0rem',
+		padding: '10px 10px 0px 10px',
+	});
+
+	const IconContainer = styled(Box)({
 		justifyContent: 'center',
+		alignItems: 'center',
+		margin: '10px 0px 0px 0px',
+		minWidth: '20px',
 	});
 
 	return (
-		<FooterContainer flex={12}>
-			<ImageContainer>
-				<Image
-					src={rocket}
-					alt='rocket'
-					layout='responsive'
-					width={248}
-					height={156.67}
-					loading='lazy'
-				/>
-			</ImageContainer>
-			<FooterBox id='contact'>
-				<FooterText>Prepair for blast of..</FooterText>
-				<IconBox>
-					<IconsContainer>
-						<Link href='mailto:haggiog0844@gmail.com'>
-							<Image
-								src={gmail}
-								alt='mail'
-								layout='fixed'
-								width={35}
-								height={35}
-							/>
-						</Link>
-					</IconsContainer>
-					<IconsContainer>
-						<Link href='/'>
-							<a
-								href='https://www.linkedin.com/in/richard-gwati-636a80233/'
-								rel='noreferrer'
-								target='_blank'
-							>
-								<Image
-									src={linkedin}
-									alt='Linkedin'
-									layout='fixed'
-									width={35}
-									height={35}
-								/>
-							</a>
-						</Link>
-					</IconsContainer>
-					<IconsContainer>
-						<Link href='mailto:haggiog0844@gmail.com'>
-							<a
-								href='https://github.com/richardHaggioGwati'
-								rel='noreferrer'
-								target='_blank'
-							>
-								<Image
-									src={github}
-									alt='github'
-									layout='fixed'
-									width={28}
-									height={28}
-								/>
-							</a>
-						</Link>
-					</IconsContainer>
-				</IconBox>
-			</FooterBox>
+		<FooterContainer flex={12} id='contact'>
+			<Header>Contact me...</Header>
+			<StyledBox>
+				<IconContainer>
+					<Image
+						src={google}
+						alt='gmail'
+						layout='responsive'
+						width={488}
+						height={512}
+					/>
+				</IconContainer>
+				<Text>
+					<Link href='mailto:haggiog0844@gmail.com'>
+						Gmail
+					</Link>
+				</Text>
+			</StyledBox>
+
+			<StyledBox>
+				<IconContainer>
+					<Image
+						src={github}
+						alt='github'
+						layout='responsive'
+						width={488}
+						height={512}
+					/>
+				</IconContainer>
+				<Text>
+					<Link href='https://github.com/richardHaggioGwati'>
+						Github
+					</Link>
+				</Text>
+			</StyledBox>
+
+			<StyledBox>
+				<IconContainer>
+					<Image
+						src={linkdin}
+						alt='linkdin'
+						layout='responsive'
+						width={488}
+						height={512}
+					/>
+				</IconContainer>
+				<Text>
+					<Link href='https://www.linkedin.com/in/richard-gwati-636a80233/'>
+						Linkdin
+					</Link>
+				</Text>
+			</StyledBox>
 		</FooterContainer>
 	);
 };

@@ -20,7 +20,7 @@
     width: 70%;
     height: 3px;
     margin: 5px 0px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.836);
     transition: 0.4s;
 }
 

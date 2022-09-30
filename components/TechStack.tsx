@@ -1,108 +1,126 @@
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { styled } from '@mui/material';
 import Image from 'next/image';
 
-import Box from '@mui/material/Box';
-import { styled } from '@mui/material';
-import Typography from '@mui/material/Typography';
+import theme from './Design/theme';
 
-import Card from './Design/Card';
-import terminal from '../public/terminal.svg';
-import design from '../public/Design.svg';
-import sun from '../public/sun.svg';
+import holder from '../public/Holder.svg';
 
-const TechStack = () => {
-	const Header = styled(Typography)({
-		color: '#ffffff',
-		textAlign: 'center',
-		margin: '1.2rem 0rem 0rem 0rem',
-		fontSize: '2rem',
+const TechStack: React.FC = () => {
+	const Container = styled(Box)({
+		display: 'flex',
+		justifyContent: 'space-around',
+		alignItems: 'center',
+		flexDirection: 'column',
+		margin: '2rem  10rem 0rem 0rem',
+		[theme.breakpoints.up('md')]: {
+			flexDirection: 'row',
+		},
+		[theme.breakpoints.down('md')]: {
+			padding: '5px 0px 0px 0px',
+			width: '100%',
+		},
 	});
 
-	const Container = styled(Box)({
+	const Title = styled(Typography)({
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
-		flexDirection: 'column',
+		textAlign: 'center',
+		color: '#000027',
+		fontSize: 'clamp(2rem, 1.5rem + 3vw, 5rem)',
+		fontWeight: '800',
 	});
 
-	const IconContainer = styled(Box)({
-		position: 'relative',
-		width: '50px',
-		height: '50px',
-		margin: '19px 0px 0px 0px',
-	});
-
-	const SubHeader = styled(Typography)({
-		color: '#ffffff',
-		margin: '1rem',
-	});
-
-	const Text = styled(Typography)({
-		color: '#fff',
-		margin: '0rem 1.3rem',
+	const HeaderText = styled(Typography)({
+		color: '#000027',
+		fontSize: 'clamp(2rem, 1rem + 1.5vw, 2.5rem)',
+		fontWeight: '500',
+		gap: '1',
 		textAlign: 'center',
 	});
 
-	const SunContainer = styled(Box)({
-		position: 'relative',
-		width: '50px',
-		height: '50px',
-		margin: '3rem 0px 0px 0px',
+	const Text = styled(Typography)({
+		color: '#000027',
+		fontSize: 'clamp(1rem, 0.5rem + 1.5vw, 1.5rem)',
+		padding: '10px 250px 0px 250px',
+		textAlign: 'center',
+		[theme.breakpoints.down('md')]: {
+			padding: '10px 0px 0px 0px',
+			width: '100%',
+		},
 	});
 
 	return (
 		<>
-			<Card
-				margin='-10px 0rem 0rem 3rem'
-				width='16rem'
-				height='33rem'
-				color='radial-gradient(circle farthest-side, #890048, #540048, #000027)'
-				data-aos="flip-up"
-			>
-				<Header>What I Do</Header>
-				<Container>
-					<IconContainer>
-						<Image
-							src={terminal}
-							alt='terminal'
-							layout='responsive'
-							width={21.94}
-							height={21.85}
-						/>
-					</IconContainer>
-					<SubHeader>Development</SubHeader>
+			<Title>What I Do</Title>
+
+			<Container flex={12}>
+				<Box>
+					<HeaderText variant='h4'>Development</HeaderText>
+
 					<Text>
 						I like to code things from scratch, and enjoy bringing ideas to life
 						in the browser.
 					</Text>
-				</Container>
+				</Box>
 
-				<Container>
-					<IconContainer>
+				<>
+					<Box
+						sx={{
+							display: 'none',
+							[theme.breakpoints.up('md')]: {
+								minWidth: '25%',
+								display: 'block',
+							},
+						}}
+					>
 						<Image
-							src={design}
-							alt='design'
+							priority
+							src={holder}
+							alt='Planets'
 							layout='responsive'
-							width={21.94}
-							height={21.85}
+							width={8467}
+							height={8520}
 						/>
-					</IconContainer>
-					<SubHeader>Designer</SubHeader>
+					</Box>
+				</>
+			</Container>
+
+			<Container flex={12}>
+				<>
+					<Box
+						sx={{
+							display: 'none',
+							maxWidth: '40%',
+							padding: '60px',
+							[theme.breakpoints.up('md')]: {
+								minWidth: '25%',
+								display: 'block',
+							},
+						}}
+					>
+						<Image
+							priority
+							src={holder}
+							alt='Planets'
+							layout='responsive'
+							width={8467}
+							height={8520}
+						/>
+					</Box>
+				</>
+
+				<Box>
+					<HeaderText variant='h4'>Designer</HeaderText>
+
 					<Text>
 						I value simple content structure, clean design patterns, and
 						thoughtful interactions.
 					</Text>
-				</Container>
-			</Card>
-
-			<SunContainer>
-				<Image
-					src={sun}
-					alt='star'
-					layout='responsive'
-					width={32}
-					height={32}
-				/>
-			</SunContainer>
+				</Box>
+			</Container>
 		</>
 	);
 };

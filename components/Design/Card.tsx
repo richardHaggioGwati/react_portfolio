@@ -2,6 +2,8 @@ import { styled } from '@mui/material';
 import Box from '@mui/material/Box';
 import { ReactNode } from 'react';
 
+import theme from './theme'
+
 interface CardProps {
 	children: ReactNode
 	width?: string
@@ -13,18 +15,21 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ children, width, height, margin, color }) => {
 	
 	const StyledCard = styled(Box)({
-		width: ` ${width ? width : '14rem'}`,
-		height: ` ${height ? height : '25rem'}`,
+		maxWidth: width,
+		minHeight: height,
 		border: 'solid',
 		borderWidth: '20px',
 		borderColor: '#ffffff',
-		margin: `${margin ? margin : '3rem'}`,
+		margin: margin,
 		backgroundImage: `${color}`,
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
-		zIndex: '-1',
+		flexWrap: 'wrap',
+		[theme.breakpoints.up('md')]: {
+			flexDirection: 'row',
+		},
 	});
 
 	return (

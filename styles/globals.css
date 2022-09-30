@@ -1,19 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
 html,
 body {
-	font-family: 'Varela Round', sans-serif;
+	font-family: 'Roboto Mono', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
 	padding: 0;
-	background-image: url("../public/Star.svg");
-	background-size: cover;
-	z-index: -1;
-	background-color: rgb(5, 3, 3);
 }
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
+a:hover {
+    text-decoration: underline;
+	color: inherit;
+}
+
+
 a:visited {
-	color: rgb(0, 0, 0);
+	color: inherit;
   }

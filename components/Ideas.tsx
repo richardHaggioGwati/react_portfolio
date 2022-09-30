@@ -1,4 +1,5 @@
 import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material';
 import Image from 'next/image';
@@ -7,13 +8,13 @@ import theme from './Design/theme';
 
 import holder from '../public/Holder.svg';
 
-const Header: React.FC = () => {
-	const Container = styled(Box)({
+const Ideas: React.FC = () => {
+    const Container = styled(Box)({
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
 		flexDirection: 'column',
-		marginTop: '2rem',
+		margin: '50px',
 		[theme.breakpoints.up('md')]: {
 			flexDirection: 'row',
 		},
@@ -21,45 +22,30 @@ const Header: React.FC = () => {
 
 	const HeaderText = styled(Typography)({
 		color: '#000027',
-		fontSize: 'clamp(2.8rem, 1rem + 4vw, 5rem)',
+		fontSize: 'clamp(2rem, 1rem + 4vw, 5rem)',
 		fontWeight: '800',
-		textAlign: 'center',
-	});
-
-	const IntroParagraph = styled(Typography)({
-		color: '#000027',
-		fontSize: 'clamp(1.2rem, 0.5rem + 1.5vw, 2.5rem)',
-		padding: '50px',
-		margin: '0px',
-		textAlign: 'center',
+		gap: '1',
+        textAlign: 'center',
+		padding: '100px',
 		[theme.breakpoints.down('md')]: {
-			padding: '10px',
+			padding: '50px 10px 50px 10px',
 		},
 	});
 
 	return (
-		<Container flex={12}>
-			<Box>
-				<HeaderText variant='h1'>
-					Frontend <br />
-					Developer <br />& Designer
-				</HeaderText>
-
-				<IntroParagraph>
-					I enjoy what I do and create <br />
-					elegantly and simple things
-					<br /> with code.
-				</IntroParagraph>
-			</Box>
-
-			<>
+		<Paper elevation={16}>
+			<Container flex={12}>
 				<Box
 					sx={{
-						minWidth: '85%',
-						padding: '10px',
+						minWidth: '40%',
+						padding: '60px',
 						[theme.breakpoints.up('md')]: {
 							minWidth: '50%',
-							padding: '60px',
+						},
+						[theme.breakpoints.down('md')]: {
+							padding: '10px 10px 0px 10px',
+							margin: '50px 100px 0px 100px',
+							width: '100%',
 						},
 					}}
 				>
@@ -72,9 +58,13 @@ const Header: React.FC = () => {
 						height={8520}
 					/>
 				</Box>
-			</>
-		</Container>
+
+				<Box>
+					<HeaderText variant='h3'>Bring your <br/>ideas to <br/>life...</HeaderText>
+				</Box>
+			</Container>
+		</Paper>
 	);
 };
 
-export default Header;
+export default Ideas;
