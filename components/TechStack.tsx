@@ -1,11 +1,12 @@
+import RiveScene from './Design/RiveScene';
+
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material';
-import Image from 'next/image';
 
 import theme from './Design/theme';
 
-import holder from '../public/Holder.svg';
+import classes from './Design/Rive.module.css';
 
 const TechStack: React.FC = () => {
 	const Container = styled(Box)({
@@ -76,13 +77,12 @@ const TechStack: React.FC = () => {
 							},
 						}}
 					>
-						<Image
-							priority
-							src={holder}
-							alt='Planets'
-							layout='responsive'
-							width={8467}
-							height={8520}
+						<RiveScene
+							src='development.riv'
+							stateMachine=''
+							hoverState=''
+							animation='Untitled 1'
+							cssClass={classes.rive}
 						/>
 					</Box>
 				</>
@@ -101,13 +101,12 @@ const TechStack: React.FC = () => {
 							},
 						}}
 					>
-						<Image
-							priority
-							src={holder}
-							alt='Planets'
-							layout='responsive'
-							width={8467}
-							height={8520}
+						<RiveScene
+							src='robot.riv'
+							stateMachine='State Machine 1'
+							hoverState='Click'
+							animation='Robot Idle'
+							cssClass={classes.rive}
 						/>
 					</Box>
 				</>
