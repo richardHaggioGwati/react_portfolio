@@ -21,6 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<>
 			<Head>
 				<title>Richard.</title>
+				<link rel='icon' href='/king.svg' />
 				<meta name='description' content='Portfolio' />
 				<meta name='keywords' content='richard, web developer, designer' />
 				<meta name='author' content='R.G' />
