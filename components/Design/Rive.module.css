@@ -1,5 +1,17 @@
-.rive {
+.tree {
+	vertical-align: top;
+	width: 904px;
+	height: 800px;	
+}
+
+.face {
 	vertical-align: top;
 	width: 604px;
 	height: 500px;
+}
+
+.robots {
+	vertical-align: top;
+	width: 500px ;
+	height: 450px;
 }

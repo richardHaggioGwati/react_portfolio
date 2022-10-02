@@ -1,11 +1,13 @@
+import RiveScene from './Design/RiveScene';
+
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material';
-import Image from 'next/image';
+import ThreeStateMachine from './Design/ThreeStateMachine'
 
 import theme from './Design/theme';
 
-import holder from '../public/Holder.svg';
+import classes from './Design/Rive.module.css';
 
 const Header: React.FC = () => {
 	const Container = styled(Box)({
@@ -46,31 +48,25 @@ const Header: React.FC = () => {
 				</HeaderText>
 
 				<IntroParagraph>
-					I enjoy what I do and create <br />
+					I enjoy what I do and create 
 					elegantly and simple things
-					<br /> with code.
+					with code.
 				</IntroParagraph>
 			</Box>
 
 			<>
 				<Box
 					sx={{
-						minWidth: '85%',
+						minWidth: '200px',
 						padding: '10px',
 						[theme.breakpoints.up('md')]: {
 							minWidth: '50%',
-							padding: '60px',
+							padding: '0px 60px 0px 60px',
 						},
 					}}
 				>
-					<Image
-						priority
-						src={holder}
-						alt='Planets'
-						layout='responsive'
-						width={8467}
-						height={8520}
-					/>
+						<ThreeStateMachine/>
+
 				</Box>
 			</>
 		</Container>
@@ -78,3 +74,15 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+
+/* 
+						<Image
+						priority
+						src={holder}
+						alt='Planets'
+						layout='responsive'
+						width={8467}
+						height={8520}
+					/>
+
+*/

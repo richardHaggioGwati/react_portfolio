@@ -68,7 +68,7 @@ const Personal: React.FC = () => {
 					stateMachine='avatar2'
 					hoverState='isHappy'
 					animation='idlePreview'
-					cssClass={classes.rive}
+					cssClass={classes.face}
 				/>
 			</ImageContainer>
 

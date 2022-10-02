@@ -14,7 +14,7 @@ const TechStack: React.FC = () => {
 		justifyContent: 'space-around',
 		alignItems: 'center',
 		flexDirection: 'column',
-		margin: '2rem  10rem 0rem 0rem',
+		margin: '0rem  10rem 0rem 0rem',
 		[theme.breakpoints.up('md')]: {
 			flexDirection: 'row',
 		},
@@ -82,7 +82,7 @@ const TechStack: React.FC = () => {
 							stateMachine=''
 							hoverState=''
 							animation='Untitled 1'
-							cssClass={classes.rive}
+							cssClass={classes.robots}
 						/>
 					</Box>
 				</>
@@ -93,8 +93,6 @@ const TechStack: React.FC = () => {
 					<Box
 						sx={{
 							display: 'none',
-							maxWidth: '40%',
-							padding: '60px',
 							[theme.breakpoints.up('md')]: {
 								minWidth: '25%',
 								display: 'block',
@@ -106,7 +104,7 @@ const TechStack: React.FC = () => {
 							stateMachine='State Machine 1'
 							hoverState='Click'
 							animation='Robot Idle'
-							cssClass={classes.rive}
+							cssClass={classes.robots}
 						/>
 					</Box>
 				</>
