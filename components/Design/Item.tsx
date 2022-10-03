@@ -1,11 +1,10 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material';
-import Image from 'next/image';
 
 import theme from './theme';
 
-import holder from '../../public/Holder.svg';
+import RiveScene from './RiveScene';
 import StyledButton from './StlyedButton';
 
 interface ItemProps {
@@ -13,9 +12,13 @@ interface ItemProps {
 	title: string;
 	text: string;
 	disabled: boolean;
-	atlText: string;
 	target: string;
+	fade: string;
+	stateMachine: string;
+	hoverState: string;
 	animation: string;
+	src: string;
+	cssClass: string;
 }
 
 const Item: React.FC<ItemProps> = ({
@@ -23,9 +26,13 @@ const Item: React.FC<ItemProps> = ({
 	title,
 	text,
 	disabled,
-	atlText,
 	target,
+	fade,
+	stateMachine,
+	hoverState,
 	animation,
+	src,
+	cssClass,
 }) => {
 	const Container = styled(Box)({
 		display: 'flex',
@@ -36,7 +43,7 @@ const Item: React.FC<ItemProps> = ({
 		[theme.breakpoints.up('md')]: {
 			flexDirection: 'row',
 			justifyContent: 'center',
-			margin: '0px 0px 80px 0px',
+			margin: '10px 0px 0px 0px',
 		},
 	});
 
@@ -64,7 +71,7 @@ const Item: React.FC<ItemProps> = ({
 		<>
 			{swap ? (
 				<>
-					<Container flex={12} data-aos={animation}>
+					<Container flex={12} data-aos={fade}>
 						<>
 							<Box
 								sx={{
@@ -75,13 +82,12 @@ const Item: React.FC<ItemProps> = ({
 									},
 								}}
 							>
-								<Image
-									priority
-									src={holder}
-									alt={atlText}
-									layout='responsive'
-									width={8467}
-									height={8520}
+								<RiveScene
+									src={src}
+									stateMachine={stateMachine}
+									hoverState={hoverState}
+									animation={animation}
+									cssClass={cssClass}
 								/>
 							</Box>
 						</>
@@ -103,7 +109,7 @@ const Item: React.FC<ItemProps> = ({
 				</>
 			) : (
 				<>
-					<Container flex={12} data-aos={animation}>
+					<Container flex={12} data-aos={fade}>
 						<Box>
 							<HeaderText variant='h4'>{title}</HeaderText>
 
@@ -128,13 +134,12 @@ const Item: React.FC<ItemProps> = ({
 									},
 								}}
 							>
-								<Image
-									priority
-									src={holder}
-									alt={atlText}
-									layout='responsive'
-									width={8467}
-									height={8520}
+								<RiveScene
+									src={src}
+									stateMachine={stateMachine}
+									hoverState={hoverState}
+									animation={animation}
+									cssClass={cssClass}
 								/>
 							</Box>
 						</>
@@ -146,44 +151,3 @@ const Item: React.FC<ItemProps> = ({
 };
 
 export default Item;
-
-/* 
-
-
-<Container flex={12} data-aos={animation}>
-				<Box>
-					<HeaderText variant='h4'>{title}</HeaderText>
-
-					<Text>{text}</Text>
-					<StyledButton
-						text='Visit'
-						target={target}
-						margin='1.5rem'
-						padding='6px 60px 6px 60px'
-						disabled={disabled}
-					/>
-				</Box>
-
-				<>
-					<Box
-						sx={{
-							maxWidth: '40%',
-							padding: '60px',
-							[theme.breakpoints.up('md')]: {
-								minWidth: '25%',
-							},
-						}}
-					>
-						<Image
-							priority
-							src={holder}
-							alt={atlText}
-							layout='responsive'
-							width={8467}
-							height={8520}
-						/>
-					</Box>
-				</>
-			</Container>
-
-*/

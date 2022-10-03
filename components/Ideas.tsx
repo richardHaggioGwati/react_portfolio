@@ -6,7 +6,8 @@ import Image from 'next/image';
 
 import theme from './Design/theme';
 
-import holder from '../public/Holder.svg';
+import classes from './Design/Rive.module.css';
+import RiveScene from './Design/RiveScene';
 
 const Ideas: React.FC = () => {
     const Container = styled(Box)({
@@ -49,14 +50,13 @@ const Ideas: React.FC = () => {
 						},
 					}}
 				>
-					<Image
-						priority
-						src={holder}
-						alt='Planets'
-						layout='responsive'
-						width={8467}
-						height={8520}
-					/>
+				<RiveScene
+					src='simple_tree.riv'
+					stateMachine=''
+					hoverState=''
+					animation='idle'
+					cssClass={classes.idea}
+				/>
 				</Box>
 
 				<Box>
