@@ -11,15 +11,15 @@ import classes from './Design/Rive.module.css';
 const TechStack: React.FC = () => {
 	const Container = styled(Box)({
 		display: 'flex',
-		justifyContent: 'space-around',
+		justifyContent: 'space-evenly',
 		alignItems: 'center',
 		flexDirection: 'column',
-		margin: '0rem  10rem 0rem 0rem',
-		[theme.breakpoints.up('md')]: {
+		margin: '0rem  1rem 0rem 0rem',
+		[theme.breakpoints.up('sm')]: {
 			flexDirection: 'row',
 		},
 		[theme.breakpoints.down('md')]: {
-			padding: '5px 0px 0px 0px',
+			padding: '0px 0px 0px 0px',
 			width: '100%',
 		},
 	});
@@ -40,6 +40,10 @@ const TechStack: React.FC = () => {
 		fontWeight: '500',
 		gap: '1',
 		textAlign: 'center',
+		[theme.breakpoints.down('md')]: {
+			padding: '0px 50px 0px 50px',
+			margin: '30px 0px 0px 0px',
+		},
 	});
 
 	const Text = styled(Typography)({
@@ -48,8 +52,8 @@ const TechStack: React.FC = () => {
 		padding: '10px 250px 0px 250px',
 		textAlign: 'center',
 		[theme.breakpoints.down('md')]: {
-			padding: '10px 0px 0px 0px',
-			width: '100%',
+			padding: '0px 50px 0px 50px',
+			margin: '10px 0px 0px 0px',
 		},
 	});
 
@@ -70,10 +74,14 @@ const TechStack: React.FC = () => {
 				<>
 					<Box
 						sx={{
-							display: 'none',
-							[theme.breakpoints.up('md')]: {
-								minWidth: '25%',
-								display: 'block',
+							minWidth: '20%',
+							margin: '0px 0px 0px -100px',
+							display: 'block',
+							[theme.breakpoints.down('sm')]: {
+								maxWidth: '100%',
+								margin: '-50px 0px 0px px',
+								padding: '5px',
+								display: 'flex',
 							},
 						}}
 					>
@@ -93,7 +101,7 @@ const TechStack: React.FC = () => {
 					<Box
 						sx={{
 							display: 'none',
-							[theme.breakpoints.up('md')]: {
+							[theme.breakpoints.up('sm')]: {
 								minWidth: '25%',
 								display: 'block',
 							},
@@ -116,6 +124,24 @@ const TechStack: React.FC = () => {
 						I value simple content structure, clean design patterns, and
 						thoughtful interactions.
 					</Text>
+				</Box>
+
+				<Box
+					sx={{
+						display: 'none',
+						[theme.breakpoints.down('sm')]: {
+							minWidth: '25%',
+							display: 'block',
+						},
+					}}
+				>
+					<RiveScene
+						src='robot.riv'
+						stateMachine='State Machine 1'
+						hoverState='Click'
+						animation='Robot Idle'
+						cssClass={classes.mobileRobot}
+					/>
 				</Box>
 			</Container>
 		</>

@@ -2,7 +2,6 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material';
-import Image from 'next/image';
 
 import theme from './Design/theme';
 
@@ -15,7 +14,8 @@ const Ideas: React.FC = () => {
 		justifyContent: 'center',
 		alignItems: 'center',
 		flexDirection: 'column',
-		margin: '50px',
+		margin: '10px',
+		maxWidth: '90%',
 		[theme.breakpoints.up('md')]: {
 			flexDirection: 'row',
 		},
@@ -35,18 +35,19 @@ const Ideas: React.FC = () => {
 
 	return (
 		<Paper elevation={16}>
-			<Container flex={12}>
+			<Container>
 				<Box
 					sx={{
 						minWidth: '40%',
 						padding: '60px',
+						overflow: 'hidden',
 						[theme.breakpoints.up('md')]: {
 							minWidth: '50%',
 						},
 						[theme.breakpoints.down('md')]: {
-							padding: '10px 10px 0px 10px',
-							margin: '50px 100px 0px 100px',
-							width: '100%',
+							padding: '0px 0px 0px 0px',
+							margin: '0px 0px 0px 0px',
+							width: '70%',
 						},
 					}}
 				>

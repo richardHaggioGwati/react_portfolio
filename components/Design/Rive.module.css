@@ -1,7 +1,7 @@
 .tree {
 	vertical-align: top;
-	width: 904px;
-	height: 800px;	
+	max-width: 904px;
+	min-height: 800px;	
 }
 
 .face {
@@ -15,6 +15,13 @@
 	width: 500px ;
 	height: 450px;
 }
+
+.mobileRobot {
+	vertical-align: top;
+	width: 400px ;
+	height: 250px;
+}
+
 
 .item {
 	vertical-align: top;
@@ -30,6 +37,37 @@
 
 .idea {
 	vertical-align: top;
-	width: 904px;
-	height: 800px;	
+	max-width: 904px;
+	min-height: 800px;	
 }
+
+@media only screen and (max-width: 600px) {
+	
+	.tree {
+		vertical-align: top;
+		width: 404px;
+		height: 500px;	
+	}
+	
+	.face {
+		vertical-align: top;
+		width: 304px;
+		height: 250px;
+	}
+	
+	.robots {
+		vertical-align: top;
+		width: 400px ;
+		height: 250px;
+		margin: 10%;
+	}
+
+	.idea {
+		vertical-align: top;
+		max-width: 704px;
+		min-height: 300px;	
+	}
+
+}
+
+

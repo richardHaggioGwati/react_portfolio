@@ -11,11 +11,11 @@ import classes from './Design/Rive.module.css';
 const Personal: React.FC = () => {
 	const Container = styled(Box)({
 		display: 'flex',
-		justifyContent: 'center',
+		justifyText: 'center',
 		alignItems: 'center',
 		flexDirection: 'column',
 		marginTop: '2rem',
-		[theme.breakpoints.up('md')]: {
+		[theme.breakpoints.up('sm')]: {
 			flexDirection: 'row',
 		},
 	});
@@ -39,29 +39,44 @@ const Personal: React.FC = () => {
 		},
 	});
 
-	const Content = styled(Typography)({
+	const Text = styled(Typography)({
 		color: '#000027',
 		textAlign: 'center',
-		fontSize: 'clamp(0.5rem, 0.5rem + 4vw, 2rem)',
-		fontWeight: '400',
+		fontSize: 'clamp(1.1rem, 0.5rem + 1.5vw, 2rem)',
+		fontWeight: '500',
 		margin: '25px 15px',
 		padding: '0 50px 0px 50px',
 		[theme.breakpoints.down('md')]: {
-			padding: '0px',
+			padding: '10px',
 		},
 	});
 
 	const ImageContainer = styled(Box)({
+		display: 'flex',
 		minWidth: '60vh',
 		padding: '20px',
 		margin: '15px -30px 25px 0px',
 		[theme.breakpoints.down('md')]: {
+			minWidth: '50%',
+			padding: '0px 30px 0px 30px',
+			margin: '20px ',
 			display: 'none',
+		},
+	});
+
+	const MobileContainer = styled(Box)({
+		display: 'none',
+		[theme.breakpoints.down('md')]: {
+			minWidth: '50%',
+			padding: '0px 30px 0px 30px',
+			margin: '20px ',
+			display: 'flex',
 		},
 	});
 
 	return (
 		<Container>
+			
 			<ImageContainer>
 				<RiveScene
 					src='avatar.riv'
@@ -78,35 +93,26 @@ const Personal: React.FC = () => {
 					Nice to meet you.
 				</Header>
 
-				<Content>
+			<MobileContainer>
+				<RiveScene
+					src='avatar.riv'
+					stateMachine='avatar2'
+					hoverState='isHappy'
+					animation='idlePreview'
+					cssClass={classes.face}
+				/>
+				</MobileContainer>
+				
+				<Text>
 					I&apos;ve been working as a freelance developer for a year now, I have
 					a peaceful sense of assurance, am innately interested and am
 					constantly trying to get better at development and design by solving
 					one challenge at a time.
-				</Content>
+				</Text>
 			</TextContainer>
+
 		</Container>
 	);
 };
 
 export default Personal;
-
-/* 
-					<Image
-						src={holder}
-						alt='Avater'
-						layout='responsive'
-						width={419}
-						height={432}
-						loading='lazy'
-					/>
-
-							minWidth: '60vh',
-		padding: '20px',
-		margin: '15px -30px 25px 0px',
-		zIndex: '1',
-		[theme.breakpoints.down('md')]: {
-			display: 'none',
-		},
-
-*/

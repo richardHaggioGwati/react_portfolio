@@ -20,6 +20,7 @@ const Footer = () => {
 		backgroundColor: '#f6f6f6',
 		minWidth: '100%',
 		height: '100px',
+		justifyContent: 'space-evenly',
 	});
 
 	const Header = styled(Typography)({

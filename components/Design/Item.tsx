@@ -34,13 +34,17 @@ const Item: React.FC<ItemProps> = ({
 	src,
 	cssClass,
 }) => {
+
 	const Container = styled(Box)({
 		display: 'flex',
-		justifyContent: 'space-around',
+		justifyContent: 'space-evenly',
 		alignItems: 'center',
 		flexDirection: 'column',
 		margin: '2rem  10rem 0rem 0rem',
-		[theme.breakpoints.up('md')]: {
+		[theme.breakpoints.down('md')]: {
+			margin: '10px 0px 0px 0px',
+		},
+		[theme.breakpoints.up('sm')]: {
 			flexDirection: 'row',
 			justifyContent: 'center',
 			margin: '10px 0px 0px 0px',
@@ -60,9 +64,8 @@ const Item: React.FC<ItemProps> = ({
 		fontSize: 'clamp(1rem, 0.2rem + 1vw, 1.5rem)',
 		padding: '10px 250px 0px 250px',
 		textAlign: 'center',
-		[theme.breakpoints.down('md')]: {
-			padding: '10px 10px 0px 10px',
-			margin: '0px 100px 0px 100px',
+		[theme.breakpoints.down('sm')]: {
+			padding: '10px 0px 0px 0px',
 			width: '100%',
 		},
 	});
@@ -76,7 +79,7 @@ const Item: React.FC<ItemProps> = ({
 							<Box
 								sx={{
 									display: 'none',
-									[theme.breakpoints.up('md')]: {
+									[theme.breakpoints.up('sm')]: {
 										minWidth: '25%',
 										display: 'block',
 									},
@@ -128,7 +131,7 @@ const Item: React.FC<ItemProps> = ({
 							<Box
 								sx={{
 									display: 'none',
-									[theme.breakpoints.up('md')]: {
+									[theme.breakpoints.up('sm')]: {
 										minWidth: '25%',
 										display: 'block',
 									},

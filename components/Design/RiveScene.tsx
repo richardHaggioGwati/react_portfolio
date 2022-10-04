@@ -45,7 +45,7 @@ const RiveScene: React.FC<Rive> = ({
 		<>
 			<RiveComponent
 				className={cssClass}
-				onMouseOver={() => inputHover && inputHover.fire()}
+				onLoad={() => inputHover && inputHover.fire()}
 			/>
 		</>
 	);

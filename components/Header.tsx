@@ -7,8 +7,6 @@ import ThreeStateMachine from './Design/ThreeStateMachine'
 
 import theme from './Design/theme';
 
-import classes from './Design/Rive.module.css';
-
 const Header: React.FC = () => {
 	const Container = styled(Box)({
 		display: 'flex',
@@ -18,6 +16,7 @@ const Header: React.FC = () => {
 		marginTop: '2rem',
 		[theme.breakpoints.up('md')]: {
 			flexDirection: 'row',
+			marginTop: '0rem',
 		},
 	});
 
@@ -26,16 +25,20 @@ const Header: React.FC = () => {
 		fontSize: 'clamp(2.8rem, 1rem + 4vw, 5rem)',
 		fontWeight: '800',
 		textAlign: 'center',
+		[theme.breakpoints.down('md')]: {
+			padding: '0px',
+		},
 	});
 
 	const IntroParagraph = styled(Typography)({
 		color: '#000027',
-		fontSize: 'clamp(1.2rem, 0.5rem + 1.5vw, 2.5rem)',
+		fontSize: 'clamp(1.2rem, 0.5rem + 1vw, 2.5rem)',
 		padding: '50px',
 		margin: '0px',
 		textAlign: 'center',
 		[theme.breakpoints.down('md')]: {
 			padding: '10px',
+			margin: '10px',
 		},
 	});
 
@@ -48,25 +51,24 @@ const Header: React.FC = () => {
 				</HeaderText>
 
 				<IntroParagraph>
-					I enjoy what I do and create 
-					elegantly and simple things
-					with code.
+					I enjoy what I do and create elegantly and simple things with code.
 				</IntroParagraph>
 			</Box>
 
 			<>
 				<Box
 					sx={{
-						minWidth: '200px',
+						minWidth: '60%',
 						padding: '10px',
-						[theme.breakpoints.up('md')]: {
+						margin: '10px ',
+						[theme.breakpoints.down('md')]: {
 							minWidth: '50%',
-							padding: '0px 60px 0px 60px',
+							padding: '0px 30px 0px 30px',
+							margin: '-200px ',
 						},
 					}}
 				>
-						<ThreeStateMachine/>
-
+					<ThreeStateMachine />
 				</Box>
 			</>
 		</Container>
@@ -74,15 +76,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-
-/* 
-						<Image
-						priority
-						src={holder}
-						alt='Planets'
-						layout='responsive'
-						width={8467}
-						height={8520}
-					/>
-
-*/
