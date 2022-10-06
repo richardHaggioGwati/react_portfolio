@@ -1,6 +1,6 @@
 import classes from './Rive.module.css'
 
-const Data = [
+const ItemData = [
 	{
 		swap: false,
 		title: 'Spotify',
@@ -55,4 +55,4 @@ const Data = [
 	},
 ];
 
-export default Data
+export default ItemData

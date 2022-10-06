@@ -57,6 +57,38 @@ const TechStack: React.FC = () => {
 		},
 	});
 
+	const RiveDevContainer = styled(Box)({
+		minWidth: '20%',
+		margin: '0px 0px 0px -100px',
+		display: 'block',
+		[theme.breakpoints.down('sm')]: {
+			maxWidth: '100%',
+			margin: '-50px 0px 0px px',
+			padding: '5px',
+			display: 'flex',
+		},
+	});
+
+	const RiveDesignContainer = styled(Box)({
+		minWidth: '20%',
+		margin: '0px 0px 0px -100px',
+		display: 'block',
+		[theme.breakpoints.down('sm')]: {
+			maxWidth: '100%',
+			margin: '-50px 0px 0px px',
+			padding: '5px',
+			display: 'flex',
+		},
+	});
+
+	const RiveDesignMobileContainer = styled(Box)({
+		display: 'none',
+		[theme.breakpoints.down('sm')]: {
+			minWidth: '25%',
+			display: 'block',
+		},
+	});
+
 	return (
 		<>
 			<Title>What I Do</Title>
@@ -72,19 +104,7 @@ const TechStack: React.FC = () => {
 				</Box>
 
 				<>
-					<Box
-						sx={{
-							minWidth: '20%',
-							margin: '0px 0px 0px -100px',
-							display: 'block',
-							[theme.breakpoints.down('sm')]: {
-								maxWidth: '100%',
-								margin: '-50px 0px 0px px',
-								padding: '5px',
-								display: 'flex',
-							},
-						}}
-					>
+					<RiveDevContainer>
 						<RiveScene
 							src='development.riv'
 							stateMachine=''
@@ -92,21 +112,13 @@ const TechStack: React.FC = () => {
 							animation='Untitled 1'
 							cssClass={classes.robots}
 						/>
-					</Box>
+					</RiveDevContainer>
 				</>
 			</Container>
 
 			<Container flex={12}>
 				<>
-					<Box
-						sx={{
-							display: 'none',
-							[theme.breakpoints.up('sm')]: {
-								minWidth: '25%',
-								display: 'block',
-							},
-						}}
-					>
+					<RiveDesignContainer>
 						<RiveScene
 							src='robot.riv'
 							stateMachine='State Machine 1'
@@ -114,7 +126,7 @@ const TechStack: React.FC = () => {
 							animation='Robot Idle'
 							cssClass={classes.robots}
 						/>
-					</Box>
+					</RiveDesignContainer>
 				</>
 
 				<Box>
@@ -126,15 +138,7 @@ const TechStack: React.FC = () => {
 					</Text>
 				</Box>
 
-				<Box
-					sx={{
-						display: 'none',
-						[theme.breakpoints.down('sm')]: {
-							minWidth: '25%',
-							display: 'block',
-						},
-					}}
-				>
+				<RiveDesignMobileContainer>
 					<RiveScene
 						src='robot.riv'
 						stateMachine='State Machine 1'
@@ -142,7 +146,7 @@ const TechStack: React.FC = () => {
 						animation='Robot Idle'
 						cssClass={classes.mobileRobot}
 					/>
-				</Box>
+				</RiveDesignMobileContainer>
 			</Container>
 		</>
 	);

@@ -9,9 +9,15 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import theme from './Design/theme';
 
-import name from '../public/Name.svg'
+import name from '../public/Name.svg';
 
 const Nav: React.FC = () => {
+	const StyledAppBar = styled(AppBar)({
+		backgroundColor: '#FFFFFF',
+		boxShadow: 'none',
+		margin: '0px 0px 0px 0px',
+	});
+
 	const StyledToolbar = styled(Toolbar)({
 		justifyContent: 'space-between',
 		display: 'flex',
@@ -19,40 +25,33 @@ const Nav: React.FC = () => {
 
 	const NameContainer = styled(Box)({
 		width: '100px',
-		padding: '0px 20px 0px 20px'
-	})
+		padding: '0px 20px 0px 20px',
+	});
+
+	const HamburgerContainer = styled(Box)({
+		display: 'none',
+		[theme.breakpoints.down('md')]: {
+			display: 'flex',
+		},
+	});
 
 	return (
 		<>
-			<AppBar
-				position='static'
-				sx={{
-					backgroundColor: '#FFFFFF',
-					boxShadow: 'none',
-					margin: '0px 0px 0px 0px',
-				}}
-			>
+			<StyledAppBar position='static'>
 				<StyledToolbar>
 					<NameContainer>
-					<Image
-						priority
-						src={name}
-						alt='Logo'
-						layout='responsive'
-						width={200}
-						height={200}
-					/>
+						<Image
+							priority
+							src={name}
+							alt='Logo'
+							layout='responsive'
+							width={200}
+							height={200}
+						/>
 					</NameContainer>
-					<Box
-						sx={{
-							display: 'none',
-							[theme.breakpoints.down('md')]: {
-								display: 'flex',
-							},
-						}}
-					>
+					<HamburgerContainer>
 						<Hamburger />
-					</Box>
+					</HamburgerContainer>
 					<StlyedButton
 						text='Contact'
 						target='#contact'
@@ -62,7 +61,7 @@ const Nav: React.FC = () => {
 						display={true}
 					/>
 				</StyledToolbar>
-			</AppBar>
+			</StyledAppBar>
 		</>
 	);
 };

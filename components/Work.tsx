@@ -2,7 +2,7 @@ import { styled } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
 import Item from './Design/Item';
-import Data from './Design/ItemData';
+import ItemData from './Design/ItemData';
 import theme from './Design/theme';
 
 const Work = () => {
@@ -23,7 +23,7 @@ const Work = () => {
 		<>
 			<Header>My passion Projects</Header>
 			<>
-				{Data.map((item) => (
+				{ItemData.map((item) => (
 					<Item
 						key={item.title}
 						swap={item.swap}

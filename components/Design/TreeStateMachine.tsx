@@ -9,7 +9,7 @@ import classes from './Rive.module.css';
  * Use set interval to increase the growth after a certain of period of time
  */
 
-const RiveScene: React.FC = ({}) => {
+const TreeStateMachine: React.FC = ({}) => {
 	const STATE_MACHINE = 'State Machine 1';
 	const HOVER_STATE_NAME = 'input';
 	let VALUE = 100;
@@ -36,4 +36,4 @@ const RiveScene: React.FC = ({}) => {
 	);
 };
 
-export default RiveScene;
+export default TreeStateMachine;

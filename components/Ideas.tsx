@@ -33,24 +33,24 @@ const Ideas: React.FC = () => {
 		},
 	});
 
+	const RiveTreeContainer = styled(Box)({
+		minWidth: '40%',
+		padding: '60px',
+		overflow: 'hidden',
+		[theme.breakpoints.up('md')]: {
+			minWidth: '50%',
+		},
+		[theme.breakpoints.down('md')]: {
+			padding: '0px 0px 0px 0px',
+			margin: '0px 0px 0px 0px',
+			width: '70%',
+		},
+	})
+
 	return (
 		<Paper elevation={16}>
 			<Container>
-				<Box
-					sx={{
-						minWidth: '40%',
-						padding: '60px',
-						overflow: 'hidden',
-						[theme.breakpoints.up('md')]: {
-							minWidth: '50%',
-						},
-						[theme.breakpoints.down('md')]: {
-							padding: '0px 0px 0px 0px',
-							margin: '0px 0px 0px 0px',
-							width: '70%',
-						},
-					}}
-				>
+				<RiveTreeContainer>
 				<RiveScene
 					src='simple_tree.riv'
 					stateMachine=''
@@ -58,7 +58,7 @@ const Ideas: React.FC = () => {
 					animation='idle'
 					cssClass={classes.idea}
 				/>
-				</Box>
+				</RiveTreeContainer>
 
 				<Box>
 					<HeaderText variant='h3'>Bring your <br/>ideas to <br/>life...</HeaderText>

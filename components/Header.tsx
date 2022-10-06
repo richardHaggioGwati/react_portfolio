@@ -3,7 +3,7 @@ import RiveScene from './Design/RiveScene';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material';
-import ThreeStateMachine from './Design/ThreeStateMachine'
+import TreeStateMachine from './Design/TreeStateMachine'
 
 import theme from './Design/theme';
 
@@ -42,6 +42,17 @@ const Header: React.FC = () => {
 		},
 	});
 
+	const RiveTreeContainer = styled(Box)({
+		minWidth: '60%',
+		padding: '10px',
+		margin: '10px ',
+		[theme.breakpoints.down('md')]: {
+			minWidth: '50%',
+			padding: '0px 30px 0px 30px',
+			margin: '-200px ',
+		},
+	})
+
 	return (
 		<Container flex={12}>
 			<Box>
@@ -56,20 +67,9 @@ const Header: React.FC = () => {
 			</Box>
 
 			<>
-				<Box
-					sx={{
-						minWidth: '60%',
-						padding: '10px',
-						margin: '10px ',
-						[theme.breakpoints.down('md')]: {
-							minWidth: '50%',
-							padding: '0px 30px 0px 30px',
-							margin: '-200px ',
-						},
-					}}
-				>
-					<ThreeStateMachine />
-				</Box>
+				<RiveTreeContainer>
+					<TreeStateMachine />
+				</RiveTreeContainer>
 			</>
 		</Container>
 	);
