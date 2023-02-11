@@ -7,11 +7,8 @@ const itim = Itim({
   variable: '--font-itim',
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+// eslint-disable-next-line arrow-body-style
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       {/*
@@ -22,4 +19,6 @@ export default function RootLayout({
       <body className={`${itim.variable} font-sans`}>{children}</body>
     </html>
   );
-}
+};
+
+export default RootLayout;
