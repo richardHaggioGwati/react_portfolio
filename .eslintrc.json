@@ -25,7 +25,9 @@
     "next.config.js",
     "commitlint.config.js",
     "postcss.config.js",
-    "tailwind.config.js"
+    "tailwind.config.js",
+    "motion.js",
+    "index.js"
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
