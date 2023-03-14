@@ -20,7 +20,7 @@ const Hero = () => {
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
       <Image
-        src="/self.png"
+        src="/1.jpg"
         alt="profile picture"
         height={150}
         width={150}
@@ -36,24 +36,14 @@ const Hero = () => {
         </h1>
 
         <div className="pt-5">
-          <Link href="#about">
+          <Link href="https://www.linkedin.com/in/richard-gwati-636a80233/">
             <button className="heroButton" type="button">
-              About
+              Linkedin
             </button>
           </Link>
-          <Link href="#experience">
+          <Link href="https://github.com/richardHaggioGwati">
             <button className="heroButton" type="button">
-              Experience
-            </button>
-          </Link>
-          <Link href="#skills">
-            <button className="heroButton" type="button">
-              Skills
-            </button>
-          </Link>
-          <Link href="#projects">
-            <button className="heroButton" type="button">
-              Projects
+              Github
             </button>
           </Link>
         </div>

@@ -2,6 +2,7 @@
 
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
@@ -14,21 +15,30 @@ const Header: React.FC = () => {
         }}
       >
         {/* Social Icons */}
-        <SocialIcon
-          url="https://twitter.com/jaketrent"
-          fgColor="#fcfbfe"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://twitter.com/jaketrent"
-          fgColor="#fcfbfe"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://twitter.com/jaketrent"
-          fgColor="#fcfbfe"
-          bgColor="transparent"
-        />
+        <Link href="https://www.linkedin.com/in/richard-gwati-636a80233/">
+          <SocialIcon
+            url="https://linkedin.com/in/jaketrent"
+            className="hover:scale-125"
+            fgColor="#fcfbfe"
+            bgColor="transparent"
+          />
+        </Link>
+        <Link href="https://github.com/richardHaggioGwati">
+          <SocialIcon
+            url="https://github.com/jaketrent"
+            className="hover:scale-125"
+            fgColor="#fcfbfe"
+            bgColor="transparent"
+          />
+        </Link>
+        <Link href="https://twitter.com/?lang=en">
+          <SocialIcon
+            url="https://twitter.com/jaketrent"
+            className="hover:scale-125"
+            fgColor="#fcfbfe"
+            bgColor="transparent"
+          />
+        </Link>
       </motion.div>
 
       <motion.div
@@ -40,12 +50,14 @@ const Header: React.FC = () => {
         className="flex flex-row items-center cursor-pointer text-gray-[#1c1e2c]"
       >
         {/* Email */}
-        <SocialIcon
-          className="cursor-pointer"
-          network="email"
-          fgColor="#fcfbfe"
-          bgColor="transparent"
-        />
+        <Link href="mailto:haggio0844@gmail.com">
+          <SocialIcon
+            className="cursor-pointer"
+            network="email"
+            fgColor="#fcfbfe"
+            bgColor="transparent"
+          />
+        </Link>
         <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
           Get in touch
         </p>

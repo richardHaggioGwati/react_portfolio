@@ -1,8 +1,5 @@
 import Hero from '../components/Hero';
 import Header from '../components/Header';
-import About from '../components/About';
-import WorkExperience from '../components/WorkExperience';
-import Skills from '../components/Skills';
 
 const Home = () => {
   return (
@@ -11,18 +8,6 @@ const Home = () => {
 
       <section id="hero" className="snap-start">
         <Hero />
-      </section>
-
-      <section id="about" className="snap-start">
-        <About />
-      </section>
-
-      <section id="experience" className="snap-start">
-        <WorkExperience />
-      </section>
-
-      <section id="skills" className="snap-start">
-        <Skills />
       </section>
     </div>
   );
