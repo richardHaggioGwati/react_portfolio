@@ -15,30 +15,24 @@ const Header: React.FC = () => {
         }}
       >
         {/* Social Icons */}
-        <Link href="https://www.linkedin.com/in/richard-gwati-636a80233/">
-          <SocialIcon
-            url="https://linkedin.com/in/jaketrent"
-            className="hover:scale-125"
-            fgColor="#fcfbfe"
-            bgColor="transparent"
-          />
-        </Link>
-        <Link href="https://github.com/richardHaggioGwati">
-          <SocialIcon
-            url="https://github.com/jaketrent"
-            className="hover:scale-125"
-            fgColor="#fcfbfe"
-            bgColor="transparent"
-          />
-        </Link>
-        <Link href="https://twitter.com/?lang=en">
-          <SocialIcon
-            url="https://twitter.com/jaketrent"
-            className="hover:scale-125"
-            fgColor="#fcfbfe"
-            bgColor="transparent"
-          />
-        </Link>
+        <SocialIcon
+          url="https://linkedin.com/in/richard-gwati-636a80233/"
+          className="hover:scale-125"
+          fgColor="#fcfbfe"
+          bgColor="transparent"
+        />
+        <SocialIcon
+          url="https://github.com/richardHaggioGwati"
+          className="hover:scale-125"
+          fgColor="#fcfbfe"
+          bgColor="transparent"
+        />
+        <SocialIcon
+          url="https://twitter.com/"
+          className="hover:scale-125"
+          fgColor="#fcfbfe"
+          bgColor="transparent"
+        />
       </motion.div>
 
       <motion.div
