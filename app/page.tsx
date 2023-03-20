@@ -67,9 +67,9 @@ const Home = () => {
         children="LinkedIn"
       />
       <a
-        href="https://github.com/pmndrs/react-three-fiber"
+        href="mailto:haggio0844@gmail.com"
         className="bottom-left"
-        children="@react-three/fiber"
+        children="Email me..."
       />
     </>
   );
