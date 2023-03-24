@@ -5,8 +5,6 @@
 /* eslint-disable react/no-unknown-property */
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-// @ts-expect-error
-import HackerText from 'react-hacker-text';
 import {
   Loader,
   OrbitControls,
@@ -21,20 +19,9 @@ const Home = () => {
       <div className="bg" />
       <h1 className="absolute top-[120px] left-[60px] font-black text-7xl m-0 text-[peru] leading-12 tracking-wide text-left">
         Discover
-        <span className="whitespace-pre text-[0.4em]">
-          {' '}
-          with
-        </span>
+        <span className="whitespace-pre text-[0.4em]"> with</span>
         <br />
-        <span>
-          <HackerText
-            text="Richard"
-            speed={70}
-            delay={100}
-            changes={30}
-            characters="all"
-          />
-        </span>
+        <span>Richard</span>
       </h1>
       <Canvas dpr={[1.5, 2]} linear shadows>
         <fog attach="fog" args={['#272730', 16, 30]} />
@@ -51,9 +38,9 @@ const Home = () => {
             shadow-bias={-0.0001}
           />
         </PerspectiveCamera>
-        <Suspense fallback={null}>
+        {/* <Suspense fallback={null}>
           <Modal url="/scene.glb" />
-        </Suspense>
+        </Suspense> */}
         <OrbitControls
           autoRotate
           enablePan={false}
