@@ -38,9 +38,9 @@ const Home = () => {
             shadow-bias={-0.0001}
           />
         </PerspectiveCamera>
-        {/* <Suspense fallback={null}>
+        <Suspense fallback={null}>
           <Modal url="/scene.glb" />
-        </Suspense> */}
+        </Suspense>
         <OrbitControls
           autoRotate
           enablePan={false}
