@@ -31,7 +31,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <head />
-      <body className={`${itim.variable} font-sans`}>{children}</body>
+      <body className={`${itim.variable} font-sans`}>
+        {children}
+      </body>
     </html>
   );
 };

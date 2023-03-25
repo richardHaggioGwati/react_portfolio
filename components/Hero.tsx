@@ -18,10 +18,10 @@ const Home = () => {
     <>
       <div className="bg" />
       <h1 className="absolute top-[120px] left-[60px] font-black text-7xl m-0 text-[peru] leading-12 tracking-wide text-left">
-        Discover
-        <span className="whitespace-pre text-[0.4em]"> with</span>
+        Prepare
+        <span className="whitespace-pre text-[0.4em]"> for</span>
         <br />
-        <span>Richard</span>
+        <span>Blast off...</span>
       </h1>
       <Canvas dpr={[1.5, 2]} linear shadows>
         <fog attach="fog" args={['#272730', 16, 30]} />
@@ -52,21 +52,6 @@ const Home = () => {
       </Canvas>
       <div className="absolute bottom-0 left-0 w-full h-full pointer-events-none" />
       <Loader />
-      <a
-        href="https://github.com/richardHaggioGwati"
-        className="absolute inline font-normal text-sm text-gray-300 no-underline z-10 top-16 left-16"
-        children="Github"
-      />
-      <a
-        href="https://www.linkedin.com/in/richard-gwati-636a80233/"
-        className="absolute inline font-normal text-sm text-gray-300 no-underline z-10 top-16 right-16"
-        children="LinkedIn"
-      />
-      <a
-        href="mailto:haggio0844@gmail.com"
-        className="absolute inline font-normal text-sm text-gray-300 no-underline z-10 bottom-16 left-16"
-        children="Email me..."
-      />
     </>
   );
 };
