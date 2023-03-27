@@ -1,4 +1,8 @@
+'use client';
+
 import Link from 'next/link';
+import { Canvas } from '@react-three/fiber';
+import { Stars } from '@react-three/drei';
 import NavbarToggle from './NavbarToggle';
 import './Navbar.css';
 
@@ -8,6 +12,9 @@ const Navbar: React.FC = () => {
       <div id="menu">
         <NavbarToggle />
         <div id="menu-arcs-wrapper">
+          <Canvas>
+            <Stars radius={500} depth={50} count={30000} factor={10} />
+          </Canvas>
           <svg id="menu-arcs">
             <circle className="menu-arc" cx="50%" cy="50%" r="18%" />
             <circle className="menu-arc" cx="50%" cy="50%" r="30%" />
@@ -51,16 +58,14 @@ const Navbar: React.FC = () => {
       </div>
 
       <div id="content">
-        <i className="fa-solid fa-planet-ringed" />
-        <i className="fa-solid fa-plus" />
-        <i className="fa-solid fa-salad" />
+        <p>Update required prefer fish in space</p>
       </div>
 
       <Link
         id="source-link"
         rel="noreferrer"
         className="meta-link"
-        href="https://www.awwwards.com/inspiration/star-atlas-menu"
+        href="/"
       >
         <i className="fa-solid fa-link" />
         <span>Navigation</span>

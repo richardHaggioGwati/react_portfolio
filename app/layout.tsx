@@ -1,5 +1,6 @@
 import '../css/globals.css';
 import { Itim } from '@next/font/google';
+import Link from 'next/link';
 
 const itim = Itim({
   subsets: ['latin'],
@@ -33,6 +34,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <head />
       <body className={`${itim.variable} font-sans`}>
         {children}
+        <Link id="source-link" rel="noreferrer" className="meta-link" href="/">
+          <i className="fa-solid fa-link" />
+          <span className="">Navigation</span>
+        </Link>
       </body>
     </html>
   );

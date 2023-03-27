@@ -24,7 +24,7 @@ const Home = () => {
         <span>Blast off...</span>
       </h1>
       <Canvas dpr={[1.5, 2]} linear shadows>
-        <fog attach="fog" args={['#272730', 16, 30]} />
+        <fog attach="fog" args={['#060606', 16, 30]} />
         <ambientLight intensity={0.75} />
         <PerspectiveCamera makeDefault position={[0, 0, 16]} fov={75}>
           <pointLight intensity={1} position={[-10, -25, -10]} />
